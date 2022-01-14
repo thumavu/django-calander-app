@@ -1,6 +1,6 @@
-#import requests
-#import json
-#import pprintpp
+import requests
+import json
+import pprintpp
 
 # ----- Learning curve, this is where I started with the project.
 # ----- The concept of python indent sensitive was a has frustration for me, while working on this project I realized that the Django framework is a semester on it's own -----
