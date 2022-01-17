@@ -1,18 +1,19 @@
 from django.shortcuts import render
 from .models import Holidays
+from dotenv import load_dotenv
+import os
 import requests
-import pprintpp
 import logging
-logger = logging.getLogger(__name__)
 
-def test(request):
-    return {'test': 'This is a test'}
+logger = logging.getLogger(__name__)
+load_dotenv()
 
 def index(request):
-    url = "https://holidayapi.com/v1/holidays?pretty&country=ZA&year=2021&key=7fab0a99-13f4-4f91-afc3-00fd1f5bf66d"
+    api_key = os.getenv("API_KEY")
+    url = f"https://holidayapi.com/v1/holidays?pretty&country=ZA&year=2021&key={api_key}"
     response = requests.get(url).json()
     status = response['status']
-    
+        
     if status is not 200:
         logger.error(f'Received status code : {status} ')
         return render(request, 'myapp/error.html', {})
@@ -44,9 +45,9 @@ def index(request):
         holiday_list.append(holiday_disctionary)
         
         # Save data on the database table created by the models
-        instance = Holidays(uuid=uuid, name=name, date=date, observed=observed, public=public,
+        holiday_instance = Holidays(uuid=uuid, name=name, date=date, observed=observed, public=public,
                             country=country, date_name=date_name, date_observed=date_observed)
-        instance.save()
+        holiday_instance.save()
         
         logger.debug(holiday_disctionary)
         
