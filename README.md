@@ -6,9 +6,10 @@
     2. Internet Access
     
 ## How to run the app :
+    0. Clone the app (git clone https://github.com/thumavu/django-calander-app.git | gh repo clone thumavu/django-calander-app)
     1. docker-compose build
-    2. sudo docker-compose up
-    3. sudo docker ps -a (Confirm the container that contains the application is started and running)
+    2. docker-compose up
+    3. docker ps -a (Confirm the container that contains the application is started and running)
     ![image](https://user-images.githubusercontent.com/16895199/149706571-a27dece5-8427-4ba8-b664-a82e89514ef6.png)
     4. Follow the link : http://localhost:8000/ 
     ![image](https://user-images.githubusercontent.com/16895199/149706727-b5ce0bd9-5bd8-4768-bc8e-8799edebface.png)
