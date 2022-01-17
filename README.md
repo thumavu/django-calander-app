@@ -1,7 +1,7 @@
 # django-calander-app
     - Calander app is an app that retrieves SA holidays from https://holidayapi.com/ and nicely displays all the holidays in a web page.
     
-    ### API KEY?
+    ## API KEY?
         - The "API KEY" is essentially stored as an environmental variable passed in by the .env file, the app uses dotenv to retrieve the var.
         - For security reseons the .env file is excluded whenever a commit is done, since it may contain sensitive information like passwords, api keys etc..  
     
