@@ -3,6 +3,10 @@
     - The app uses the views module to pull data from holidaysapi, the data gets processed and only relevant data gets stored on sqlite db and rendered.
     - The modules module is responsible for creating a schema and specifications of the table fields, It is used by the views module to store data into the relevant table. - - The urls module is the entry point and it utilizes the views module for serving the webpage with data rendered by the views module
     
+    API KEY:
+        - The "API KEY" is essentially stored as an environmental variable passed in by the .env file, the app uses dotenv to retrieve env variables.
+        - For security reseons the .env file is excluded whenever a commit is done, since it may contain sensitive information like passwords, api keys etc..  
+    
 ## To run the app you need:
     1. Docker and docker-composed installed in you machine
     2. Internet Access
