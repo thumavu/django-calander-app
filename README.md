@@ -1,5 +1,7 @@
 # django-calander-app
-    - Calander app is an app that retrieves SA holidays from https://holidayapi.com/ and nicely displays all the holidays in a web page.
+    - Calander app is an app that retrieves SA holidays from https://holidayapi.com/.
+    - The app uses the views module to pull data from holidaysapi, the data gets processed and only relevant data gets stored on sqlite db and rendered.
+    - The modules module is responsible for creating a schema and specifications of the table fields, It is used by the views module to store data into the relevant table. - - The urls module is the entry point and it utilizes the views module for serving the webpage with data rendered by the views module
     
 ## To run the app you need:
     1. Docker and docker-composed installed in you machine
